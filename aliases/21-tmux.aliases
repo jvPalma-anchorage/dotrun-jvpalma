@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# DotRun Aliases - custom Category
+# This file is managed by DotRun. Manual edits may be overwritten.
+# Use 'dr -s set 21-tmux' to add aliases to this category.
+
+alias tm="dr tm"
+alias tmm="tmux ls || echo '🔵 No Sessions'"

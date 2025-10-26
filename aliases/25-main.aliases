@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# DotRun Aliases - custom Category
+# This file is managed by DotRun. Manual edits may be overwritten.
+# Use 'dr -s set 25-main' to add aliases to this category.
+
+alias devPython="python3 -m venv .venv && source .venv/bin/activate && pip install -e ."
+
+alias ccc='claude --dangerously-skip-permissions'
+alias Ccc='clear; claude --dangerously-skip-permissions'
+alias ccC='claude --dangerously-skip-permissions --continue'
+alias CcC='clear; claude --dangerously-skip-permissions --continue'

@@ -1,0 +1,13 @@
+# DotRun Collection Metadata
+# This file defines collection properties for version tracking and distribution
+
+name: dotrun-jvpalma
+version: 0.1.0
+description: jvPalma Custom Collection
+author: jvPalma - (Joao Palma)
+repository: 
+
+# Optional fields:
+# license: MIT
+# homepage: https://example.com
+# dependencies: []

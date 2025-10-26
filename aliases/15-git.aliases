@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+# DotRun Aliases - custom Category
+# This file is managed by DotRun. Manual edits may be overwritten.
+# Use 'dr aliases set 15-git' to add aliases to this category.
+
+##############################
+## * Yadm commands
+##############################
+yadmHelpCommands=""
+yadmHelpCommands+="\n  yst        yadm status"
+yadmHelpCommands+="\n  yadd       yadm add"
+yadmHelpCommands+="\n  yrm        yadm rm <file> --cached"
+yadmHelpCommands+="\n  yrm        yadm checkout <file>"
+yadmHelpCommands+="\n  ycmp       yadm commit & push"
+alias yhelp="echo -e '$yadmHelpCommands \n'"
+alias yst="dr gitStatus ydiff -h"
+alias yadd="dr gitStatus yadd -h"
+alias yrm="dr gitStatus yrm -h"
+alias yco="dr gitStatus yco -h"
+alias ycmp="yadm commit -m 'changes'; yadm push --force-with-lease" #    Yadm -> commit & push
+alias yupp="yadm add -u; ycmp"                                      #    Yadm -> commit & push
+alias yp="yadm pull"
+
+##############################
+## * Git commands
+##############################
+yadmHelpCommands=""
+yadmHelpCommands+="\n  gst        git status"
+yadmHelpCommands+="\n  gadd       git add"
+yadmHelpCommands+="\n  grm        git rm <file> --cached"
+yadmHelpCommands+="\n  gco        git checkout <file>"
+yadmHelpCommands+="\n  cmm        git commit & push"
+alias ghelp="echo -e '$yadmHelpCommands \n'"
+alias gst="dr gitStatus gdiff -h"
+alias gadd="dr gitStatus gadd -h"
+alias grm="dr gitStatus grm -h"
+alias gco="dr gitStatus gco -h"
+alias pp="git push --force-with-lease" #        Git -> force push
+alias newb="git master; git co -b"     #     Git --> create new branch from master (w/ rebase)
+alias gp="git pull"
+
+alias gfe="dr git/commits/fetch"
+alias gmm="git checkout master; dr git/commits/fetch; git pull"
+alias gprum="dr git/commits/fetch && dr git/commits/prum"
+
+alias co="dr git/branch/co"
+alias prFix="dr git/prs/prFix"
+alias prReady="dr git/prs/prReady"
+alias prDraft="dr git/prs/prDraft"
+alias prReview="dr git/prs/prReview"
+
+alias rnext="git rebase --continue"
+alias rskip="git rebase --skip"
+alias rstop="git rebase --abort"
+alias rcurrent="git checkout --ours .; git add ."
+alias rincoming="git checkout --theirs .; git add ."
+
+alias branch="dr git/branch/branchName"
+alias cmp="dr git/commits/addCommitAndPush"
+alias cmm="dr git/commits/autosquashCommit"
