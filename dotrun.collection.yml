@@ -5,8 +5,7 @@ name: dotrun-jvpalma
 version: 0.1.0
 description: jvPalma Custom Collection
 author: jvPalma - (Joao Palma)
-repository: 
-
+repository: https://github.com/jvPalma-anchorage/dotrun-jvpalma
 # Optional fields:
 # license: MIT
 # homepage: https://example.com
