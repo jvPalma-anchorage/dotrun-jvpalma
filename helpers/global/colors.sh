@@ -14,6 +14,7 @@ GRAY="$(tput setaf 8)"
 ORANGE="$(tput setaf 9)"
 RESET="$(tput sgr0)"
 NC="$(tput sgr0)" # No Color
+BOLD="$(tput bold)"
 
 # BOLD=$'\e[1m'
 # CYAN=$'\e[36m'

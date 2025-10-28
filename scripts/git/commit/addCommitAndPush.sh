@@ -31,11 +31,10 @@
 loadHelpers global/logging
 
 main() {
-  local num
-  num=2
 
-  if [ "$#" -ge 1 ]; then
+  if [ ! "$#" -ge 1 ]; then
     log_error "Provide a commit Message"
+    exit 1
   fi
 
   HUMAN_VERIFIED=true git add -A

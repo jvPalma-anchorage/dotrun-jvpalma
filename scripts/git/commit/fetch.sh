@@ -43,8 +43,19 @@ main() {
     git fetch origin "refs/heads/${github_user}/*:refs/remotes/origin/${github_user}/*" >/dev/null 2>&1 && log_success "Fetched ${github_user} branches"
   fi
 
-  git fetch origin master >/dev/null 2>&1 && log_success "Fetched master branch"
-  git pull >/dev/null 2>&1 && log_success "Pulled latest changes"
+  if git fetch origin master >/dev/null 2>&1; then
+    log_success "Fetched master branch"
+  else
+    log_error "Failed to fetch master branch"
+    exit 1
+  fi
+
+  if git fetch origin master >/dev/null 2>&1; then
+    log_success "Pulled latest changes"
+  else
+    log_error "Failed to pull latest changes"
+    exit 1
+  fi
 }
 
 main "$@"

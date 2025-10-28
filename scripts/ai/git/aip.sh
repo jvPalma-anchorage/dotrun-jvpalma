@@ -211,6 +211,7 @@ main() {
       log_warning "${YELLOW}⚠️  Prompt review cancelled.${RESET}"
       break
     fi
+    log_success "Accepted. generating..."
 
     # Generate PR description
     local pr_output

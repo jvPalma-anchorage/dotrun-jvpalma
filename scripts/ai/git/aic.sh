@@ -244,6 +244,7 @@ main() {
       log_warning "${YELLOW}⚠️  Prompt review cancelled.${RESET}"
       break
     fi
+    log_success "Accepted. generating..."
 
     # Generate commit message using the reviewed prompt
     local commit_msg
@@ -273,8 +274,8 @@ main() {
         # Save to history (10 latest)
         save_history "$reviewed_output"
         echo
-        echo -e "${GREEN}\t ${CYAN}git  ${GREEN}commit -m ${RESET}\"${reviewed_output}\"${RESET}"
-        echo -e "${GREEN}\t ${CYAN}dr ${GREEN}aip ${RESET}\"${reviewed_output}\"${RESET}"
+        echo -e "${GREEN}\t ${GREEN}git ${RESET}commit -m ${YELLOW}\"${reviewed_output}\"${RESET}"
+        echo -e "${GREEN}\t ${GREEN}dr ${RESET}aip ${YELLOW}\"${reviewed_output}\"${RESET}"
         echo ""
         break
         ;;

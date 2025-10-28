@@ -4,8 +4,8 @@
 # This file is managed by DotRun. Manual edits may be overwritten.
 # Use 'dr -s set 30-system' to add aliases to this category.
 
-alias cc="clear" #       Bash -> clear console
+alias cc="clear"
 
-alias ll="clear; eza --icons --long --group-directories-first --sort=type --sort=name --sort=extension --sort=name -a -a --time-style='+%Y-%m-%d %H:%M' --color-scale=age --color-scale-mode=gradient"
+alias ll="cc; command -v eza >/dev/null 2>&1 && { eza --icons --long --group-directories-first --sort=type --sort=name --sort=extension --sort=name -a -a --time-style='+%Y-%m-%d %H:%M' --color-scale=age --color-scale-mode=gradient } || { ls -lart }"
 
 alias ip="ip -c a s"

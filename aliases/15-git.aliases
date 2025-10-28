@@ -52,7 +52,7 @@ alias prReview="dr git/prs/prReview"
 
 alias rnext="git rebase --continue"
 alias rskip="git rebase --skip"
-alias rstop="git rebase --abort"
+alias rabort="git rebase --abort"
 alias rcurrent="git checkout --ours .; git add ."
 alias rincoming="git checkout --theirs .; git add ."
 
